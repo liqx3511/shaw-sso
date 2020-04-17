@@ -70,6 +70,14 @@
             <pattern>${log.pattern}</pattern>
         </encoder>
     </appender>
+<<<<<<< HEAD
+=======
+	
+	<!-- 系统模块日志级别控制  -->
+	<logger name="com.show" level="info" />
+	<!-- Spring日志级别控制  -->
+	<logger name="org.springframework" level="warn" />
+>>>>>>> origin/master
 
     <!-- 系统模块日志级别控制  -->
     <logger name="com.shaw" level="info"/>

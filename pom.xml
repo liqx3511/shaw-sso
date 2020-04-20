@@ -35,7 +35,7 @@
         <poi.version>3.17</poi.version>
         <oshi.version>3.9.1</oshi.version>
         <velocity.version>1.7</velocity.version>
-        <hutool.version>4.1.1</hutool.version>
+        <hutool.version>4.1.12</hutool.version>
     </properties>
 
     <dependencies>

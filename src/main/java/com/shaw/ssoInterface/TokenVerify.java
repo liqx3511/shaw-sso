@@ -2,11 +2,11 @@ package com.shaw.ssoInterface;
 
 import com.alibaba.fastjson.JSONObject;
 import com.shaw.framework.aspectj.lang.annotation.Log;
+import com.shaw.framework.aspectj.lang.enums.BusinessType;
+import com.shaw.framework.aspectj.lang.enums.OperatorType;
 import com.shaw.framework.security.LoginUser;
 import com.shaw.framework.security.service.TokenService;
-import com.shaw.framework.web.request.RequestData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,8 +28,8 @@ public class TokenVerify {
     @Autowired
     TokenService tokenService;
 
+    @Log(title = "查询登陆人信息", businessType = BusinessType.OTHER, operatorType = OperatorType.MANAGE)
     @PostMapping("/info")
-    @Log
     public Object getPermission(HttpServletRequest request) {
         LoginUser loginUser = tokenService.getLoginUser(request);
         return JSONObject.toJSON(loginUser);

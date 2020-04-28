@@ -262,6 +262,17 @@
                     <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
                 </configuration>
             </plugin>
+            <!--动态解析 yml 中的 @value@-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
